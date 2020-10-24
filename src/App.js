@@ -60,7 +60,7 @@ const App = () => {
               </Link>
             </Button>
             <Typography variant="h6" className={classes.title}>
-              Daftar Karyawan Read Only with Create-React-App
+              Contoh Aplikasi CRA
             </Typography>
             <Button>
               <Link href="https://github.com/yougo-belajar-software/daftar-karyawan-cra" color="textPrimary">
