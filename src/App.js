@@ -5,9 +5,11 @@ import Karyawan from './Karyawan';
 import { useKaryawan } from './useKaryawan'
 import { Container, AppBar, Toolbar, Typography, Button, Link } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
-import Image from 'material-ui-image'
-import ParticlesBg from 'particles-bg'
+import Image from 'material-ui-image';
+import ParticlesBg from 'particles-bg';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   box: {
     height: 50,
-    width:'100%'
+    width: '100%'
   },
   appbar: {
     marginBottom: 20
@@ -52,16 +54,29 @@ const App = () => {
       <Container maxWidth="lg" component="h1">
         <AppBar position="static" color="transparent" className={classes.appbar}>
           <Toolbar>
+            <Button>
+              <Link href={process.env.VERCEL_URL} color="textPrimary">
+                <HomeIcon />
+              </Link>
+            </Button>
             <Typography variant="h6" className={classes.title}>
-              Daftar Karyawan Read Only
-    </Typography>
+              Daftar Karyawan Read Only with Create-React-App
+            </Typography>
             <Button>
               <Link href="https://github.com/yougo-belajar-software/daftar-karyawan-cra" color="textPrimary">
                 <GitHubIcon />
               </Link>
             </Button>
+            <Button>
+              <Link href="https://www.youtube.com/c/YouGoBelajarSoftware" color="textPrimary">
+                <YouTubeIcon />
+              </Link>
+            </Button>
           </Toolbar>
         </AppBar>
+        <Image aspectRatio={2 / 1}
+          src="http://loremflickr.com/800/400"
+        />
         <ListKaryawan
           AnakKomponent={
             React.useMemo(
@@ -74,7 +89,6 @@ const App = () => {
         >
         </ListKaryawan>
         <ParticlesBg type="cobweb" bg={true} />
-
       </Container>
     </div>
 
