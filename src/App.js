@@ -76,7 +76,7 @@ const App = () => {
           </Toolbar>
         </AppBar>
         <Image aspectRatio={2 / 1}
-          src="http://loremflickr.com/800/400"
+          src="https://loremflickr.com/800/400"
         />
         <ListKaryawan
           AnakKomponent={
